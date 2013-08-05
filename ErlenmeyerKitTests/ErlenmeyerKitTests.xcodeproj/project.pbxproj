@@ -1,0 +1,647 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7334B51D17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h in Resources */ = {isa = PBXBuildFile; fileRef = 7334B51B17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h */; };
+		7334B51E17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h in Resources */ = {isa = PBXBuildFile; fileRef = 7334B51B17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h */; };
+		7334B52117A6CA0A00218177 /* NSManagedObject+EKCopyingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B51C17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.m */; };
+		7347368A17A6D3FE00B0CBD2 /* PCHTTP.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347362A17A6D3FE00B0CBD2 /* PCHTTP.h */; };
+		7347368B17A6D3FE00B0CBD2 /* PCHTTP.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347362A17A6D3FE00B0CBD2 /* PCHTTP.h */; };
+		7347368C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347362B17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h */; };
+		7347368D17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347362B17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h */; };
+		7347369817A6D3FE00B0CBD2 /* PCHTTPClient.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347363417A6D3FE00B0CBD2 /* PCHTTPClient.h */; };
+		7347369917A6D3FE00B0CBD2 /* PCHTTPClient.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347363417A6D3FE00B0CBD2 /* PCHTTPClient.h */; };
+		734736A417A6D3FE00B0CBD2 /* PCHTTPResponse.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347363D17A6D3FE00B0CBD2 /* PCHTTPResponse.h */; };
+		734736A517A6D3FE00B0CBD2 /* PCHTTPResponse.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347363D17A6D3FE00B0CBD2 /* PCHTTPResponse.h */; };
+		734736B017A6D3FE00B0CBD2 /* PCHTTPSerializer.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347364617A6D3FE00B0CBD2 /* PCHTTPSerializer.h */; };
+		734736B117A6D3FE00B0CBD2 /* PCHTTPSerializer.h in Resources */ = {isa = PBXBuildFile; fileRef = 7347364617A6D3FE00B0CBD2 /* PCHTTPSerializer.h */; };
+		7347371D17A6D91600B0CBD2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7347371C17A6D91000B0CBD2 /* CoreData.framework */; };
+		7347371E17A6D9F300B0CBD2 /* PCHTTPBatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347362C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.m */; };
+		7347371F17A6D9F300B0CBD2 /* PCHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347363517A6D3FE00B0CBD2 /* PCHTTPClient.m */; };
+		7347372017A6D9F300B0CBD2 /* PCHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347363E17A6D3FE00B0CBD2 /* PCHTTPResponse.m */; };
+		7347372117A6D9F300B0CBD2 /* PCHTTPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347364717A6D3FE00B0CBD2 /* PCHTTPSerializer.m */; };
+		7347372D17A6DA2B00B0CBD2 /* PCHTTPBatchClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347362C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.m */; };
+		7347372E17A6DA2B00B0CBD2 /* PCHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347363517A6D3FE00B0CBD2 /* PCHTTPClient.m */; };
+		7347372F17A6DA2B00B0CBD2 /* PCHTTPResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347363E17A6D3FE00B0CBD2 /* PCHTTPResponse.m */; };
+		7347373017A6DA2B00B0CBD2 /* PCHTTPSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7347364717A6D3FE00B0CBD2 /* PCHTTPSerializer.m */; };
+		7347373717A6DA4400B0CBD2 /* NSManagedObject+EKManagedObjectExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C09217A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m */; };
+		7347373817A6DA4400B0CBD2 /* NSManagedObject+EKQueryingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C09617A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.m */; };
+		7347373917A6DA4400B0CBD2 /* NSManagedObject+EKCopyingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 7334B51C17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.m */; };
+		7347373A17A6DA4600B0CBD2 /* ErlenmeyerKitTestsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C07F17A5C5230000DA61 /* ErlenmeyerKitTestsTests.m */; };
+		7347373D17A6DA5800B0CBD2 /* EKTestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06417A5C5230000DA61 /* EKTestsAppDelegate.m */; };
+		7347373E17A6DA5800B0CBD2 /* EKTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06A17A5C5230000DA61 /* EKTestsViewController.m */; };
+		7347373F17A6DA5800B0CBD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06017A5C5230000DA61 /* main.m */; };
+		738AB65417A6DB8F005829F7 /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65317A6DB8F005829F7 /* EKTestItem.m */; };
+		738AB65517A6DB8F005829F7 /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65317A6DB8F005829F7 /* EKTestItem.m */; };
+		738AB65817A6DB8F005829F7 /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65717A6DB8F005829F7 /* EKTestUser.m */; };
+		738AB65917A6DB8F005829F7 /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65717A6DB8F005829F7 /* EKTestUser.m */; };
+		738AB65A17A6DBD8005829F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C06617A5C5230000DA61 /* Main.storyboard */; };
+		738AB65B17A6DBDD005829F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C06617A5C5230000DA61 /* Main.storyboard */; };
+		73C5C05517A5C5230000DA61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05417A5C5230000DA61 /* Foundation.framework */; };
+		73C5C05717A5C5230000DA61 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05617A5C5230000DA61 /* CoreGraphics.framework */; };
+		73C5C05917A5C5230000DA61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05817A5C5230000DA61 /* UIKit.framework */; };
+		73C5C05F17A5C5230000DA61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C05D17A5C5230000DA61 /* InfoPlist.strings */; };
+		73C5C06117A5C5230000DA61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06017A5C5230000DA61 /* main.m */; };
+		73C5C06517A5C5230000DA61 /* EKTestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06417A5C5230000DA61 /* EKTestsAppDelegate.m */; };
+		73C5C06B17A5C5230000DA61 /* EKTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06A17A5C5230000DA61 /* EKTestsViewController.m */; };
+		73C5C06D17A5C5230000DA61 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C06C17A5C5230000DA61 /* Images.xcassets */; };
+		73C5C07417A5C5230000DA61 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C07317A5C5230000DA61 /* XCTest.framework */; };
+		73C5C07517A5C5230000DA61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05417A5C5230000DA61 /* Foundation.framework */; };
+		73C5C07617A5C5230000DA61 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05817A5C5230000DA61 /* UIKit.framework */; };
+		73C5C07E17A5C5230000DA61 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C07C17A5C5230000DA61 /* InfoPlist.strings */; };
+		73C5C09317A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C09217A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m */; };
+		73C5C09717A5C8340000DA61 /* NSManagedObject+EKQueryingExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C09617A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.m */; };
+		73D4E47817A6DC6500F9588E /* EKTestModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 7334B51317A6BA9400218177 /* EKTestModel.xcdatamodeld */; };
+		73D4E47917A6DC6D00F9588E /* EKTestModel.xcdatamodeld in Resources */ = {isa = PBXBuildFile; fileRef = 7334B51317A6BA9400218177 /* EKTestModel.xcdatamodeld */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		73C5C07717A5C5230000DA61 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 73C5C04917A5C5230000DA61 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 73C5C05017A5C5230000DA61;
+			remoteInfo = ErlenmeyerKitTests;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		7334B51417A6BA9400218177 /* EKTestModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = EKTestModel.xcdatamodel; sourceTree = "<group>"; };
+		7334B51B17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+EKCopyingExtensions.h"; sourceTree = "<group>"; };
+		7334B51C17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+EKCopyingExtensions.m"; sourceTree = "<group>"; };
+		7347362A17A6D3FE00B0CBD2 /* PCHTTP.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTP.h; sourceTree = "<group>"; };
+		7347362B17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTPBatchClient.h; sourceTree = "<group>"; };
+		7347362C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPBatchClient.m; sourceTree = "<group>"; };
+		7347363417A6D3FE00B0CBD2 /* PCHTTPClient.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTPClient.h; sourceTree = "<group>"; };
+		7347363517A6D3FE00B0CBD2 /* PCHTTPClient.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPClient.m; sourceTree = "<group>"; };
+		7347363D17A6D3FE00B0CBD2 /* PCHTTPResponse.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTPResponse.h; sourceTree = "<group>"; };
+		7347363E17A6D3FE00B0CBD2 /* PCHTTPResponse.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPResponse.m; sourceTree = "<group>"; };
+		7347364617A6D3FE00B0CBD2 /* PCHTTPSerializer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PCHTTPSerializer.h; sourceTree = "<group>"; };
+		7347364717A6D3FE00B0CBD2 /* PCHTTPSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPSerializer.m; sourceTree = "<group>"; };
+		7347371C17A6D91000B0CBD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		7360269117A6015800F79B72 /* EKManagedObjectExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectExtensions.h; sourceTree = "<group>"; };
+		738AB65217A6DB8F005829F7 /* EKTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestItem.h; sourceTree = "<group>"; };
+		738AB65317A6DB8F005829F7 /* EKTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestItem.m; sourceTree = "<group>"; };
+		738AB65617A6DB8F005829F7 /* EKTestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestUser.h; sourceTree = "<group>"; };
+		738AB65717A6DB8F005829F7 /* EKTestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestUser.m; sourceTree = "<group>"; };
+		73C5C05117A5C5230000DA61 /* ErlenmeyerKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErlenmeyerKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C5C05417A5C5230000DA61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		73C5C05617A5C5230000DA61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		73C5C05817A5C5230000DA61 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		73C5C05C17A5C5230000DA61 /* ErlenmeyerKitTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErlenmeyerKitTests-Info.plist"; sourceTree = "<group>"; };
+		73C5C05E17A5C5230000DA61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73C5C06017A5C5230000DA61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		73C5C06217A5C5230000DA61 /* ErlenmeyerKitTests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ErlenmeyerKitTests-Prefix.pch"; sourceTree = "<group>"; };
+		73C5C06317A5C5230000DA61 /* EKTestsAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKTestsAppDelegate.h; sourceTree = "<group>"; };
+		73C5C06417A5C5230000DA61 /* EKTestsAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTestsAppDelegate.m; sourceTree = "<group>"; };
+		73C5C06717A5C5230000DA61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		73C5C06917A5C5230000DA61 /* EKTestsViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EKTestsViewController.h; sourceTree = "<group>"; };
+		73C5C06A17A5C5230000DA61 /* EKTestsViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EKTestsViewController.m; sourceTree = "<group>"; };
+		73C5C06C17A5C5230000DA61 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		73C5C07217A5C5230000DA61 /* ErlenmeyerKitTestsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ErlenmeyerKitTestsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73C5C07317A5C5230000DA61 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		73C5C07B17A5C5230000DA61 /* ErlenmeyerKitTestsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ErlenmeyerKitTestsTests-Info.plist"; sourceTree = "<group>"; };
+		73C5C07D17A5C5230000DA61 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		73C5C07F17A5C5230000DA61 /* ErlenmeyerKitTestsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ErlenmeyerKitTestsTests.m; sourceTree = "<group>"; };
+		73C5C09117A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+EKManagedObjectExtensions.h"; sourceTree = "<group>"; };
+		73C5C09217A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+EKManagedObjectExtensions.m"; sourceTree = "<group>"; };
+		73C5C09517A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSManagedObject+EKQueryingExtensions.h"; sourceTree = "<group>"; };
+		73C5C09617A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSManagedObject+EKQueryingExtensions.m"; sourceTree = "<group>"; };
+		73C5C09F17A5CA6C0000DA61 /* EKEnumerations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EKEnumerations.h; path = ../EKEnumerations.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		73C5C04E17A5C5230000DA61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347371D17A6D91600B0CBD2 /* CoreData.framework in Frameworks */,
+				73C5C05717A5C5230000DA61 /* CoreGraphics.framework in Frameworks */,
+				73C5C05917A5C5230000DA61 /* UIKit.framework in Frameworks */,
+				73C5C05517A5C5230000DA61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73C5C06F17A5C5230000DA61 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C5C07417A5C5230000DA61 /* XCTest.framework in Frameworks */,
+				73C5C07617A5C5230000DA61 /* UIKit.framework in Frameworks */,
+				73C5C07517A5C5230000DA61 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		7347365317A6D3FE00B0CBD2 /* PCHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				7347362A17A6D3FE00B0CBD2 /* PCHTTP.h */,
+				7347362B17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h */,
+				7347362C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.m */,
+				7347363417A6D3FE00B0CBD2 /* PCHTTPClient.h */,
+				7347363517A6D3FE00B0CBD2 /* PCHTTPClient.m */,
+				7347363D17A6D3FE00B0CBD2 /* PCHTTPResponse.h */,
+				7347363E17A6D3FE00B0CBD2 /* PCHTTPResponse.m */,
+				7347364617A6D3FE00B0CBD2 /* PCHTTPSerializer.h */,
+				7347364717A6D3FE00B0CBD2 /* PCHTTPSerializer.m */,
+			);
+			path = PCHTTP;
+			sourceTree = "<group>";
+		};
+		7347368817A6D3FE00B0CBD2 /* PCHTTP */ = {
+			isa = PBXGroup;
+			children = (
+				7347365317A6D3FE00B0CBD2 /* PCHTTP */,
+			);
+			path = PCHTTP;
+			sourceTree = "<group>";
+		};
+		7347368917A6D3FE00B0CBD2 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				7347368817A6D3FE00B0CBD2 /* PCHTTP */,
+			);
+			name = Dependencies;
+			path = ../Dependencies;
+			sourceTree = "<group>";
+		};
+		73C5C04817A5C5230000DA61 = {
+			isa = PBXGroup;
+			children = (
+				73C5C09017A5C66E0000DA61 /* ErlenmeyerKit */,
+				73C5C05A17A5C5230000DA61 /* ErlenmeyerKitTests */,
+				73C5C07917A5C5230000DA61 /* ErlenmeyerKitTestsTests */,
+				73C5C05317A5C5230000DA61 /* Frameworks */,
+				73C5C05217A5C5230000DA61 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		73C5C05217A5C5230000DA61 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C05117A5C5230000DA61 /* ErlenmeyerKitTests.app */,
+				73C5C07217A5C5230000DA61 /* ErlenmeyerKitTestsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		73C5C05317A5C5230000DA61 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7347371C17A6D91000B0CBD2 /* CoreData.framework */,
+				73C5C05417A5C5230000DA61 /* Foundation.framework */,
+				73C5C05617A5C5230000DA61 /* CoreGraphics.framework */,
+				73C5C05817A5C5230000DA61 /* UIKit.framework */,
+				73C5C07317A5C5230000DA61 /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		73C5C05A17A5C5230000DA61 /* ErlenmeyerKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C06317A5C5230000DA61 /* EKTestsAppDelegate.h */,
+				73C5C06417A5C5230000DA61 /* EKTestsAppDelegate.m */,
+				73C5C06617A5C5230000DA61 /* Main.storyboard */,
+				73C5C06917A5C5230000DA61 /* EKTestsViewController.h */,
+				73C5C06A17A5C5230000DA61 /* EKTestsViewController.m */,
+				73C5C06C17A5C5230000DA61 /* Images.xcassets */,
+				73C5C05B17A5C5230000DA61 /* Supporting Files */,
+			);
+			path = ErlenmeyerKitTests;
+			sourceTree = "<group>";
+		};
+		73C5C05B17A5C5230000DA61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C05C17A5C5230000DA61 /* ErlenmeyerKitTests-Info.plist */,
+				73C5C05D17A5C5230000DA61 /* InfoPlist.strings */,
+				73C5C06017A5C5230000DA61 /* main.m */,
+				73C5C06217A5C5230000DA61 /* ErlenmeyerKitTests-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73C5C07917A5C5230000DA61 /* ErlenmeyerKitTestsTests */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C07F17A5C5230000DA61 /* ErlenmeyerKitTestsTests.m */,
+				73C5C07A17A5C5230000DA61 /* Supporting Files */,
+				7334B51317A6BA9400218177 /* EKTestModel.xcdatamodeld */,
+				738AB65217A6DB8F005829F7 /* EKTestItem.h */,
+				738AB65317A6DB8F005829F7 /* EKTestItem.m */,
+				738AB65617A6DB8F005829F7 /* EKTestUser.h */,
+				738AB65717A6DB8F005829F7 /* EKTestUser.m */,
+			);
+			path = ErlenmeyerKitTestsTests;
+			sourceTree = "<group>";
+		};
+		73C5C07A17A5C5230000DA61 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C07B17A5C5230000DA61 /* ErlenmeyerKitTestsTests-Info.plist */,
+				73C5C07C17A5C5230000DA61 /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		73C5C08B17A5C66C0000DA61 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				7360269117A6015800F79B72 /* EKManagedObjectExtensions.h */,
+				73C5C09117A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.h */,
+				73C5C09217A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m */,
+				73C5C09517A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.h */,
+				73C5C09617A5C82E0000DA61 /* NSManagedObject+EKQueryingExtensions.m */,
+				7334B51B17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h */,
+				7334B51C17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.m */,
+			);
+			name = Categories;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		73C5C09017A5C66E0000DA61 /* ErlenmeyerKit */ = {
+			isa = PBXGroup;
+			children = (
+				73C5C09F17A5CA6C0000DA61 /* EKEnumerations.h */,
+				7347368917A6D3FE00B0CBD2 /* Dependencies */,
+				73C5C08B17A5C66C0000DA61 /* Categories */,
+			);
+			name = ErlenmeyerKit;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		73C5C05017A5C5230000DA61 /* ErlenmeyerKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73C5C08317A5C5230000DA61 /* Build configuration list for PBXNativeTarget "ErlenmeyerKitTests" */;
+			buildPhases = (
+				73C5C04D17A5C5230000DA61 /* Sources */,
+				73C5C04E17A5C5230000DA61 /* Frameworks */,
+				73C5C04F17A5C5230000DA61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ErlenmeyerKitTests;
+			productName = ErlenmeyerKitTests;
+			productReference = 73C5C05117A5C5230000DA61 /* ErlenmeyerKitTests.app */;
+			productType = "com.apple.product-type.application";
+		};
+		73C5C07117A5C5230000DA61 /* ErlenmeyerKitTestsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 73C5C08617A5C5230000DA61 /* Build configuration list for PBXNativeTarget "ErlenmeyerKitTestsTests" */;
+			buildPhases = (
+				73C5C06E17A5C5230000DA61 /* Sources */,
+				73C5C06F17A5C5230000DA61 /* Frameworks */,
+				73C5C07017A5C5230000DA61 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				73C5C07817A5C5230000DA61 /* PBXTargetDependency */,
+			);
+			name = ErlenmeyerKitTestsTests;
+			productName = ErlenmeyerKitTestsTests;
+			productReference = 73C5C07217A5C5230000DA61 /* ErlenmeyerKitTestsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		73C5C04917A5C5230000DA61 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = EKTests;
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = MegaBits;
+				TargetAttributes = {
+					73C5C07117A5C5230000DA61 = {
+						TestTargetID = 73C5C05017A5C5230000DA61;
+					};
+				};
+			};
+			buildConfigurationList = 73C5C04C17A5C5230000DA61 /* Build configuration list for PBXProject "ErlenmeyerKitTests" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 73C5C04817A5C5230000DA61;
+			productRefGroup = 73C5C05217A5C5230000DA61 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				73C5C05017A5C5230000DA61 /* ErlenmeyerKitTests */,
+				73C5C07117A5C5230000DA61 /* ErlenmeyerKitTestsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		73C5C04F17A5C5230000DA61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				734736A417A6D3FE00B0CBD2 /* PCHTTPResponse.h in Resources */,
+				738AB65B17A6DBDD005829F7 /* Main.storyboard in Resources */,
+				7334B51D17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h in Resources */,
+				73C5C06D17A5C5230000DA61 /* Images.xcassets in Resources */,
+				73C5C05F17A5C5230000DA61 /* InfoPlist.strings in Resources */,
+				73D4E47817A6DC6500F9588E /* EKTestModel.xcdatamodeld in Resources */,
+				7347368C17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h in Resources */,
+				7347369817A6D3FE00B0CBD2 /* PCHTTPClient.h in Resources */,
+				734736B017A6D3FE00B0CBD2 /* PCHTTPSerializer.h in Resources */,
+				7347368A17A6D3FE00B0CBD2 /* PCHTTP.h in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73C5C07017A5C5230000DA61 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				734736A517A6D3FE00B0CBD2 /* PCHTTPResponse.h in Resources */,
+				738AB65A17A6DBD8005829F7 /* Main.storyboard in Resources */,
+				7347369917A6D3FE00B0CBD2 /* PCHTTPClient.h in Resources */,
+				73D4E47917A6DC6D00F9588E /* EKTestModel.xcdatamodeld in Resources */,
+				7347368D17A6D3FE00B0CBD2 /* PCHTTPBatchClient.h in Resources */,
+				7347368B17A6D3FE00B0CBD2 /* PCHTTP.h in Resources */,
+				734736B117A6D3FE00B0CBD2 /* PCHTTPSerializer.h in Resources */,
+				7334B51E17A6C99A00218177 /* NSManagedObject+EKCopyingExtensions.h in Resources */,
+				73C5C07E17A5C5230000DA61 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		73C5C04D17A5C5230000DA61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				73C5C06117A5C5230000DA61 /* main.m in Sources */,
+				73C5C06517A5C5230000DA61 /* EKTestsAppDelegate.m in Sources */,
+				7334B52117A6CA0A00218177 /* NSManagedObject+EKCopyingExtensions.m in Sources */,
+				73C5C09717A5C8340000DA61 /* NSManagedObject+EKQueryingExtensions.m in Sources */,
+				73C5C09317A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m in Sources */,
+				738AB65417A6DB8F005829F7 /* EKTestItem.m in Sources */,
+				73C5C06B17A5C5230000DA61 /* EKTestsViewController.m in Sources */,
+				7347371E17A6D9F300B0CBD2 /* PCHTTPBatchClient.m in Sources */,
+				7347371F17A6D9F300B0CBD2 /* PCHTTPClient.m in Sources */,
+				7347372017A6D9F300B0CBD2 /* PCHTTPResponse.m in Sources */,
+				738AB65817A6DB8F005829F7 /* EKTestUser.m in Sources */,
+				7347372117A6D9F300B0CBD2 /* PCHTTPSerializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		73C5C06E17A5C5230000DA61 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7347373A17A6DA4600B0CBD2 /* ErlenmeyerKitTestsTests.m in Sources */,
+				7347373717A6DA4400B0CBD2 /* NSManagedObject+EKManagedObjectExtensions.m in Sources */,
+				7347373817A6DA4400B0CBD2 /* NSManagedObject+EKQueryingExtensions.m in Sources */,
+				7347373917A6DA4400B0CBD2 /* NSManagedObject+EKCopyingExtensions.m in Sources */,
+				7347373D17A6DA5800B0CBD2 /* EKTestsAppDelegate.m in Sources */,
+				7347373E17A6DA5800B0CBD2 /* EKTestsViewController.m in Sources */,
+				7347373F17A6DA5800B0CBD2 /* main.m in Sources */,
+				7347372D17A6DA2B00B0CBD2 /* PCHTTPBatchClient.m in Sources */,
+				738AB65517A6DB8F005829F7 /* EKTestItem.m in Sources */,
+				7347372F17A6DA2B00B0CBD2 /* PCHTTPResponse.m in Sources */,
+				738AB65917A6DB8F005829F7 /* EKTestUser.m in Sources */,
+				7347372E17A6DA2B00B0CBD2 /* PCHTTPClient.m in Sources */,
+				7347373017A6DA2B00B0CBD2 /* PCHTTPSerializer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		73C5C07817A5C5230000DA61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 73C5C05017A5C5230000DA61 /* ErlenmeyerKitTests */;
+			targetProxy = 73C5C07717A5C5230000DA61 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		73C5C05D17A5C5230000DA61 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73C5C05E17A5C5230000DA61 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		73C5C06617A5C5230000DA61 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73C5C06717A5C5230000DA61 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		73C5C07C17A5C5230000DA61 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				73C5C07D17A5C5230000DA61 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		73C5C08117A5C5230000DA61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		73C5C08217A5C5230000DA61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		73C5C08417A5C5230000DA61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErlenmeyerKitTests/ErlenmeyerKitTests-Prefix.pch";
+				INFOPLIST_FILE = "ErlenmeyerKitTests/ErlenmeyerKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		73C5C08517A5C5230000DA61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErlenmeyerKitTests/ErlenmeyerKitTests-Prefix.pch";
+				INFOPLIST_FILE = "ErlenmeyerKitTests/ErlenmeyerKitTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		73C5C08717A5C5230000DA61 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ErlenmeyerKitTests.app/ErlenmeyerKitTests";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode\\ 5.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErlenmeyerKitTests/ErlenmeyerKitTests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "ErlenmeyerKitTestsTests/ErlenmeyerKitTestsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		73C5C08817A5C5230000DA61 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ErlenmeyerKitTests.app/ErlenmeyerKitTests";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(SYSTEM_APPS_DIR)/Xcode\\ 5.app/Contents/Developer/Library/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ErlenmeyerKitTests/ErlenmeyerKitTests-Prefix.pch";
+				INFOPLIST_FILE = "ErlenmeyerKitTestsTests/ErlenmeyerKitTestsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		73C5C04C17A5C5230000DA61 /* Build configuration list for PBXProject "ErlenmeyerKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73C5C08117A5C5230000DA61 /* Debug */,
+				73C5C08217A5C5230000DA61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73C5C08317A5C5230000DA61 /* Build configuration list for PBXNativeTarget "ErlenmeyerKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73C5C08417A5C5230000DA61 /* Debug */,
+				73C5C08517A5C5230000DA61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		73C5C08617A5C5230000DA61 /* Build configuration list for PBXNativeTarget "ErlenmeyerKitTestsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				73C5C08717A5C5230000DA61 /* Debug */,
+				73C5C08817A5C5230000DA61 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		7334B51317A6BA9400218177 /* EKTestModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				7334B51417A6BA9400218177 /* EKTestModel.xcdatamodel */,
+			);
+			currentVersion = 7334B51417A6BA9400218177 /* EKTestModel.xcdatamodel */;
+			path = EKTestModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 73C5C04917A5C5230000DA61 /* Project object */;
+}
