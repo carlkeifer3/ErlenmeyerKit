@@ -25,11 +25,11 @@
 #define __EKEnumDefine(EnumName)                                                                                                            \
     static NSDictionary *__EK##EnumName##ValuesByName()                                                                                     \
     {                                                                                                                                       \
-        NSArray *valueNamesStrings = [__EK##EnumName##Constants componentsSeparatedByString: @","];                                         \
+        NSArray *valueNameStrings = [__EK##EnumName##Constants componentsSeparatedByString: @","];                                          \
         NSMutableDictionary *valuesByName = [NSMutableDictionary dictionary];                                                               \
                                                                                                                                             \
         NSInteger lastValue = -1;                                                                                                           \
-        for (NSString *valueNameString valueNameStrings)                                                                                    \
+        for (NSString *valueNameString in valueNameStrings)                                                                                 \
         {                                                                                                                                   \
             NSArray *valueNamePair = [valueNameString componentsSeparatedByString: @"="];                                                   \
             id value;                                                                                                                       \
@@ -44,7 +44,7 @@
             }                                                                                                                               \
             value = @(lastValue);                                                                                                           \
                                                                                                                                             \
-            [valuesByName setObject: value forKey: name];                                                                                   \
+            [valuesByName setObject: value forKey: [valueNamePair objectAtIndex: 0]];                                                                                   \
         }                                                                                                                                   \
                                                                                                                                             \
         return (NSDictionary *)valuesByName;                                                                                                \
@@ -52,7 +52,7 @@
                                                                                                                                             \
     static NSDictionary *__EK##EnumName##NamesByValue()                                                                                     \
     {                                                                                                                                       \
-        NSArray *valueNameStrings = [__Erlenmeyer##EnumName##Constants componentsSeparatedByString: @","];                                  \
+        NSArray *valueNameStrings = [__EK##EnumName##Constants componentsSeparatedByString: @","];                                          \
         NSMutableDictionary *namesByValue = [NSMutableDictionary dictionary];                                                               \
                                                                                                                                             \
         NSInteger lastValue = -1;                                                                                                           \
@@ -79,9 +79,9 @@
         return (NSDictionary *)namesByValue;                                                                                                \
     }                                                                                                                                       \
                                                                                                                                             \
-    __EKEnumStringConversionFunctionsDefine(EnumName)                                                                                       \
-    __EKEnumIntegerConversionFunctionsDefine(EnumName)                                                                                      \
-    __EKEnumNSStringCategoryDefine(EnumName)                                                                                                \
+    __EKEnumStringConversionFunctionsDefine(EnumName);                                                                                      \
+    __EKEnumIntegerConversionFunctionsDefine(EnumName);                                                                                     \
+    __EKEnumNSStringCategoryDefine(EnumName);                                                                                               \
 
 
 /*!
@@ -124,20 +124,20 @@
 /*!
  *  DOCME
  */
-#define __EKNSStringCategoryDefine(EnumName)                                                                                                \
-    @interface NSString (__EKEnum##EnumName##Extensions)                                                                                    \
-        - (EnumName)EnumName##Value;                                                                                                        \
-        - (id)EnumName##ValueObject;                                                                                                        \
-    @end                                                                                                                                    \
-                                                                                                                                            \
-    @implementation NSString (__EK##EnumName##Extensions)                                                                                   \
-        - (EnumName)EnumName##Value                                                                                                         \
-        {                                                                                                                                   \
-            return EnumName##FromString(self);                                                                                              \
-        }                                                                                                                                   \
-                                                                                                                                            \
-        - (id)EnumName##ValueObject                                                                                                         \
-        {                                                                                                                                   \
-            return @([self EnumName##Value]);                                                                                               \
-        }                                                                                                                                   \
+#define __EKNSStringCategoryDefine(EnumName)                                                                                            \
+    @interface NSString (__EKEnum##EnumName##Extensions)                                                                                \
+    - (EnumName)EnumName##Value;                                                                                                        \
+    - (id)EnumName##ValueObject;                                                                                                        \
+    @end                                                                                                                                \
+                                                                                                                                        \
+    @implementation NSString (__EKEnum##EnumName##Extensions)                                                                           \
+    - (EnumName)EnumName##Value                                                                                                         \
+    {                                                                                                                                   \
+        return EnumName##FromString(self);                                                                                              \
+    }                                                                                                                                   \
+                                                                                                                                        \
+    - (id)EnumName##ValueObject                                                                                                         \
+    {                                                                                                                                   \
+        return @([self EnumName##Value]);                                                                                               \
+    }                                                                                                                                   \
     @end

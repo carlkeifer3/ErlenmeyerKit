@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
+#import "EKEnumerations.h"
 
 @class EKTestItemName, EKTestUser;
+
+EKEnum(Test, TestValue);
+@interface NSString (FUCK)
+@end
 
 @interface EKTestItem : NSManagedObject
 
