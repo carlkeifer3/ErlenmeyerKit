@@ -22,6 +22,24 @@
 /*!
  *  DOCME
  */
+#define __EKEnumStringConversionFunctionsDefine(EnumName)                                                                                   \
+
+
+/*!
+ *  DOCME
+ */
+#define __EKIntegerConversionFunctionsDefine(EnumName)                                                                                      \
+
+
+/*!
+ *  DOCME
+ */
+#define __EKNSStringCategoryDefine(EnumName)                                                                                            \
+
+
+/*!
+ *  DOCME
+ */
 #define __EKEnumDefine(EnumName)                                                                                                            \
     static NSDictionary *__EK##EnumName##ValuesByName()                                                                                     \
     {                                                                                                                                       \
@@ -79,32 +97,21 @@
         return (NSDictionary *)namesByValue;                                                                                                \
     }                                                                                                                                       \
                                                                                                                                             \
-    __EKEnumStringConversionFunctionsDefine(EnumName);                                                                                      \
-    __EKEnumIntegerConversionFunctionsDefine(EnumName);                                                                                     \
-    __EKEnumNSStringCategoryDefine(EnumName);                                                                                               \
-
-
-/*!
- *  DOCME
- */
-#define __EKEnumStringConversionFunctionsDefine(EnumName)                                                                                   \
-    static NSString *NSStringFrom##EnumName(EnumName value)                                                                                 \
+    /* String Conversion Functions */                                                                                                       \
+    __unused static NSString *NSStringFrom##EnumName(EnumName value)                                                                        \
     {                                                                                                                                       \
         id valueObject = @(value);                                                                                                          \
         return [__EK##EnumName##NamesByValue() objectForKey: valueObject];                                                                  \
     }                                                                                                                                       \
                                                                                                                                             \
-    static EnumName EnumName##FromString(NSString *string)                                                                                  \
+    __unused static EnumName EnumName##FromString(NSString *string)                                                                         \
     {                                                                                                                                       \
         id valueObject = [__EK##EnumName##ValuesByName() objectForKey: string];                                                             \
         return (EnumName)[valueObject integerValue];                                                                                        \
-    }
-
-/*!
- *  DOCME
- */
-#define __EKIntegerConversionFunctionsDefine(EnumName)                                                                                      \
-    static EnumName EnumName##FromInteger(NSInteger integer)                                                                                \
+    }                                                                                                                                       \
+                                                                                                                                            \
+    /* Integer Conversion Functions */                                                                                                      \
+    __unused static EnumName EnumName##FromInteger(NSInteger integer)                                                                       \
     {                                                                                                                                       \
         NSArray *enumValues = [[__EK##EnumName##ValuesByName() allValues] sortedArrayUsingSelector: @selector(compare:)];                   \
         EnumName closestWithoutGoingOver = INT_MIN;                                                                                         \
@@ -119,25 +126,22 @@
         }                                                                                                                                   \
                                                                                                                                             \
         return closestWithoutGoingOver;                                                                                                     \
-    }
-
-/*!
- *  DOCME
- */
-#define __EKNSStringCategoryDefine(EnumName)                                                                                            \
-    @interface NSString (__EKEnum##EnumName##Extensions)                                                                                \
-    - (EnumName)EnumName##Value;                                                                                                        \
-    - (id)EnumName##ValueObject;                                                                                                        \
-    @end                                                                                                                                \
-                                                                                                                                        \
-    @implementation NSString (__EKEnum##EnumName##Extensions)                                                                           \
-    - (EnumName)EnumName##Value                                                                                                         \
-    {                                                                                                                                   \
-        return EnumName##FromString(self);                                                                                              \
-    }                                                                                                                                   \
-                                                                                                                                        \
-    - (id)EnumName##ValueObject                                                                                                         \
-    {                                                                                                                                   \
-        return @([self EnumName##Value]);                                                                                               \
-    }                                                                                                                                   \
+    }                                                                                                                                       \
+                                                                                                                                            \
+    /* NSString Category */                                                                                                                 \
+    @interface NSString (__EKEnum##EnumName##Extensions)                                                                                    \
+    - (EnumName)EnumName##Value;                                                                                                            \
+    - (id)EnumName##ValueObject;                                                                                                            \
+    @end                                                                                                                                    \
+                                                                                                                                            \
+    @implementation NSString (__EKEnum##EnumName##Extensions)                                                                               \
+    - (EnumName)EnumName##Value                                                                                                             \
+    {                                                                                                                                       \
+        return EnumName##FromString(self);                                                                                                  \
+    }                                                                                                                                       \
+                                                                                                                                            \
+    - (id)EnumName##ValueObject                                                                                                             \
+    {                                                                                                                                       \
+        return @([self EnumName##Value]);                                                                                                   \
+    }                                                                                                                                       \
     @end

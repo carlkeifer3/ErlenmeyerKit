@@ -12,9 +12,10 @@
 
 @class EKTestItemName, EKTestUser;
 
-EKEnum(Test, TestValue);
-@interface NSString (FUCK)
-@end
+EKEnum(Test,
+    TestValue,
+    T2
+);
 
 @interface EKTestItem : NSManagedObject
 
