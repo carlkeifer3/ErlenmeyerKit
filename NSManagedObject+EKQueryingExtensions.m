@@ -83,7 +83,6 @@ static NSManagedObjectModel *sharedManagedObjectModel;
     {
         NSMutableArray *allBundles = [NSMutableArray array];
         [allBundles addObjectsFromArray: [NSBundle allBundles]];
-        [allBundles addObjectsFromArray: [NSBundle allFrameworks]];
         sharedManagedObjectModel = [NSManagedObjectModel mergedModelFromBundles: allBundles];
     }
     
