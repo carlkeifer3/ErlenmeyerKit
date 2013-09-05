@@ -1,5 +1,5 @@
 //
-//  EKTestUser.h
+//  EKTestItemName.h
 //  ErlenmeyerKitTests
 //
 //  Created by Patrick Perini on 8/6/13.
@@ -9,18 +9,16 @@
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
 
-@class EKTestItem, EKTestUser;
+@class EKTestItem;
 
-@interface EKTestUser : NSManagedObject
+@interface EKTestItemName : NSManagedObject
 
-@property (nonatomic, retain) NSDate * creationDate;
-@property (nonatomic, retain) NSString * email;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSString * uuid;
 @property (nonatomic, retain) NSSet *items;
-@property (nonatomic, retain) EKTestUser *siblingUser;
 @end
 
-@interface EKTestUser (CoreDataGeneratedAccessors)
+@interface EKTestItemName (CoreDataGeneratedAccessors)
 
 - (void)addItemsObject:(EKTestItem *)value;
 - (void)removeItemsObject:(EKTestItem *)value;

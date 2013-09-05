@@ -31,40 +31,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
-    
-    [NSManagedObject setServerURL: @"http://127.0.0.1:8082"];
-
-//    
-//    EKTestUser *testUser = [self testUser];    
-    EKTestItem *item = [[EKTestItem alloc] init];
-    [item setUuid: @"1000"];
-    [item setName: @"TEST ITEM"];
-//    [testUser addItemsObject: item];
-//    
-//    item = [[EKTestItem alloc] init];
-    [item setUuid: @"2000"];
-    [item setName: @"TEST ITEM 2"];
-//    [testUser addItemsObject: item];
-//    
-//    [testUser saveToServer: ^(NSError *error)
-//    {
-//        assert(error == nil);
-//    }];
-
-    [EKTestUser get: @"0001"
-         fromServer: ^(NSManagedObject *object, NSError *error) {
-             NSLog(@"%@", [(EKTestUser *)object items]);
-         }];
-//    [EKTestUser allFromServer: ^(NSArray *all, NSError *error)
-//     {
-//         NSLog(@"%@", all);
-//         
-////         [[EKTestUser get: @"0001"] deleteFromServer: ^(NSError *error)
-////          {
-////              assert(error == nil);
-////          }];
-//     } where: nil];
 }
 
 - (void)didReceiveMemoryWarning

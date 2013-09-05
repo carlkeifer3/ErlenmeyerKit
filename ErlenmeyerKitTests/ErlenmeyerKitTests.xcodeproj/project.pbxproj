@@ -36,10 +36,12 @@
 		7347373D17A6DA5800B0CBD2 /* EKTestsAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06417A5C5230000DA61 /* EKTestsAppDelegate.m */; };
 		7347373E17A6DA5800B0CBD2 /* EKTestsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06A17A5C5230000DA61 /* EKTestsViewController.m */; };
 		7347373F17A6DA5800B0CBD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C5C06017A5C5230000DA61 /* main.m */; };
-		738AB65417A6DB8F005829F7 /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65317A6DB8F005829F7 /* EKTestItem.m */; };
-		738AB65517A6DB8F005829F7 /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65317A6DB8F005829F7 /* EKTestItem.m */; };
-		738AB65817A6DB8F005829F7 /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65717A6DB8F005829F7 /* EKTestUser.m */; };
-		738AB65917A6DB8F005829F7 /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 738AB65717A6DB8F005829F7 /* EKTestUser.m */; };
+		7387396317B1DDD1003F5B6E /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396217B1DDD1003F5B6E /* EKTestItem.m */; };
+		7387396417B1DDD1003F5B6E /* EKTestItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396217B1DDD1003F5B6E /* EKTestItem.m */; };
+		7387396717B1DDD2003F5B6E /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396617B1DDD2003F5B6E /* EKTestUser.m */; };
+		7387396817B1DDD2003F5B6E /* EKTestUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396617B1DDD2003F5B6E /* EKTestUser.m */; };
+		7387396B17B1DDD2003F5B6E /* EKTestItemName.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396A17B1DDD2003F5B6E /* EKTestItemName.m */; };
+		7387396C17B1DDD2003F5B6E /* EKTestItemName.m in Sources */ = {isa = PBXBuildFile; fileRef = 7387396A17B1DDD2003F5B6E /* EKTestItemName.m */; };
 		738AB65A17A6DBD8005829F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C06617A5C5230000DA61 /* Main.storyboard */; };
 		738AB65B17A6DBDD005829F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73C5C06617A5C5230000DA61 /* Main.storyboard */; };
 		73C5C05517A5C5230000DA61 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73C5C05417A5C5230000DA61 /* Foundation.framework */; };
@@ -85,10 +87,12 @@
 		7347364717A6D3FE00B0CBD2 /* PCHTTPSerializer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PCHTTPSerializer.m; sourceTree = "<group>"; };
 		7347371C17A6D91000B0CBD2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		7360269117A6015800F79B72 /* EKManagedObjectExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKManagedObjectExtensions.h; sourceTree = "<group>"; };
-		738AB65217A6DB8F005829F7 /* EKTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestItem.h; sourceTree = "<group>"; };
-		738AB65317A6DB8F005829F7 /* EKTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestItem.m; sourceTree = "<group>"; };
-		738AB65617A6DB8F005829F7 /* EKTestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestUser.h; sourceTree = "<group>"; };
-		738AB65717A6DB8F005829F7 /* EKTestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestUser.m; sourceTree = "<group>"; };
+		7387396117B1DDD1003F5B6E /* EKTestItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestItem.h; sourceTree = "<group>"; };
+		7387396217B1DDD1003F5B6E /* EKTestItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestItem.m; sourceTree = "<group>"; };
+		7387396517B1DDD2003F5B6E /* EKTestUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestUser.h; sourceTree = "<group>"; };
+		7387396617B1DDD2003F5B6E /* EKTestUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestUser.m; sourceTree = "<group>"; };
+		7387396917B1DDD2003F5B6E /* EKTestItemName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EKTestItemName.h; sourceTree = "<group>"; };
+		7387396A17B1DDD2003F5B6E /* EKTestItemName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EKTestItemName.m; sourceTree = "<group>"; };
 		73C5C05117A5C5230000DA61 /* ErlenmeyerKitTests.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ErlenmeyerKitTests.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		73C5C05417A5C5230000DA61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		73C5C05617A5C5230000DA61 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -235,11 +239,13 @@
 			children = (
 				73C5C07F17A5C5230000DA61 /* ErlenmeyerKitTestsTests.m */,
 				73C5C07A17A5C5230000DA61 /* Supporting Files */,
+				7387396117B1DDD1003F5B6E /* EKTestItem.h */,
+				7387396917B1DDD2003F5B6E /* EKTestItemName.h */,
+				7387396A17B1DDD2003F5B6E /* EKTestItemName.m */,
+				7387396517B1DDD2003F5B6E /* EKTestUser.h */,
+				7387396617B1DDD2003F5B6E /* EKTestUser.m */,
+				7387396217B1DDD1003F5B6E /* EKTestItem.m */,
 				7334B51317A6BA9400218177 /* EKTestModel.xcdatamodeld */,
-				738AB65217A6DB8F005829F7 /* EKTestItem.h */,
-				738AB65317A6DB8F005829F7 /* EKTestItem.m */,
-				738AB65617A6DB8F005829F7 /* EKTestUser.h */,
-				738AB65717A6DB8F005829F7 /* EKTestUser.m */,
 			);
 			path = ErlenmeyerKitTestsTests;
 			sourceTree = "<group>";
@@ -396,12 +402,13 @@
 				7334B52117A6CA0A00218177 /* NSManagedObject+EKCopyingExtensions.m in Sources */,
 				73C5C09717A5C8340000DA61 /* NSManagedObject+EKQueryingExtensions.m in Sources */,
 				73C5C09317A5C7EF0000DA61 /* NSManagedObject+EKManagedObjectExtensions.m in Sources */,
-				738AB65417A6DB8F005829F7 /* EKTestItem.m in Sources */,
 				73C5C06B17A5C5230000DA61 /* EKTestsViewController.m in Sources */,
 				7347371E17A6D9F300B0CBD2 /* PCHTTPBatchClient.m in Sources */,
+				7387396B17B1DDD2003F5B6E /* EKTestItemName.m in Sources */,
 				7347371F17A6D9F300B0CBD2 /* PCHTTPClient.m in Sources */,
+				7387396317B1DDD1003F5B6E /* EKTestItem.m in Sources */,
+				7387396717B1DDD2003F5B6E /* EKTestUser.m in Sources */,
 				7347372017A6D9F300B0CBD2 /* PCHTTPResponse.m in Sources */,
-				738AB65817A6DB8F005829F7 /* EKTestUser.m in Sources */,
 				7347372117A6D9F300B0CBD2 /* PCHTTPSerializer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -418,9 +425,10 @@
 				7347373E17A6DA5800B0CBD2 /* EKTestsViewController.m in Sources */,
 				7347373F17A6DA5800B0CBD2 /* main.m in Sources */,
 				7347372D17A6DA2B00B0CBD2 /* PCHTTPBatchClient.m in Sources */,
-				738AB65517A6DB8F005829F7 /* EKTestItem.m in Sources */,
+				7387396817B1DDD2003F5B6E /* EKTestUser.m in Sources */,
+				7387396417B1DDD1003F5B6E /* EKTestItem.m in Sources */,
 				7347372F17A6DA2B00B0CBD2 /* PCHTTPResponse.m in Sources */,
-				738AB65917A6DB8F005829F7 /* EKTestUser.m in Sources */,
+				7387396C17B1DDD2003F5B6E /* EKTestItemName.m in Sources */,
 				7347372E17A6DA2B00B0CBD2 /* PCHTTPClient.m in Sources */,
 				7347373017A6DA2B00B0CBD2 /* PCHTTPSerializer.m in Sources */,
 			);

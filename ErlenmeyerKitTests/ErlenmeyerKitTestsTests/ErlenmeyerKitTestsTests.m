@@ -10,6 +10,9 @@
 #import "../../EKManagedObjectExtensions.h"
 #import "EKTestUser.h"
 #import "EKTestItem.h"
+#import "EKTestItemName.h"
+
+#define block(runLoop) [runLoop runUntilDate: [NSDate dateWithTimeIntervalSinceNow: 0.1]]
 
 @interface ErlenmeyerKitTestsTests : XCTestCase
 
@@ -20,7 +23,7 @@
 - (void)setUp
 {
     [NSManagedObject deleteAll];
-    [NSManagedObject setServerURL: @"http://127.0.0.1:8082"];
+    [NSManagedObject setServerURL: @"http://127.0.0.1:8080"];
 }
 
 - (void)tearDown
@@ -43,9 +46,18 @@
 {
     EKTestItem *testItem = [[EKTestItem alloc] init];
     [testItem setUuid: @"0100"];
-    [testItem setName: @"Test Item"];
+    [testItem setName: @"Test Item 0"];
     
     return testItem;
+}
+
+- (EKTestItemName *)testItemName:(NSInteger)index
+{
+    EKTestItemName *testItemName = [[EKTestItemName alloc] init];
+    [testItemName setUuid: [NSString stringWithFormat: @"%d000", index + 1]];
+    [testItemName setName: [NSString stringWithFormat: @"Test Item Name %d", index]];
+    
+    return testItemName;
 }
 
 #pragma mark - Test EKQueryingExtensions
@@ -93,25 +105,37 @@
     XCTAssertFalse([testUser hasChanges], @"[testUser hasChanges]");
 }
 
-- (void)testSaveToServer
+- (void)testServerFlow
 {
+    __block BOOL finished = NO;
     
+    EKTestUser *testUser = [self testUser];
+    EKTestItem *testItem = [self testItem];
+    
+    EKTestItemName *testItemName0 = [self testItemName: 0];
+    EKTestItemName *testItemName1 = [self testItemName: 1];
+    
+    [testItem addItemNamesObject: testItemName0];
+    [testItem addItemNamesObject: testItemName1];
+    [testUser addItemsObject: testItem];
+    
+    [testUser saveToServer: ^(NSError *error)
+    {
+        XCTAssertNil(error, @"error == %@", error);
+         
+        [EKTestUser allFromServer: ^(NSArray *all, NSError *error)
+        {
+            XCTAssertNil(error, @"error == %@", error);
+            XCTAssertFalse([all count] <= 0, @"[all count] == %d", [all count]);
+            
+            finished = YES;
+        } where: @{}];
+    }];
+    
+    
+    while (!finished)
+        block([NSRunLoop currentRunLoop]);
 }
-
-//- (void)testAllFromServer
-//{
-//    EKTestUser *testUser = [self testUser];
-//    [testUser saveToServer: ^(NSError *error)
-//    {
-//        XCTAssertNil(error, @"error == %@", error);
-//        
-//        [EKTestUser allFromServer: ^(NSArray *all, NSError *error)
-//        {
-//            XCTAssertNil(error, @"error == %@", error);
-//            XCTAssertFalse([all count] <= 0, @"[all count] == %d", [all count]);
-//        } where: @{}];
-//    }];
-//}
 
 #pragma mark - EKManagedObjectExtensions
 - (void)testDictionaryValue
@@ -163,8 +187,8 @@
     [testUser1 addEntriesFromDictionary: testUser1Dictionary];
     
     XCTAssertEqualObjects([testUser1 uuid], @"0002", @"[testUser1 uuid] == %@", [testUser1 uuid]);
-    XCTAssertEquals([testUser1 siblingUser], testUser0, @"[testUser1 siblingUser] == %@", [testUser1 siblingUser]);
-    XCTAssertEquals([testUser0 siblingUser], testUser1, @"[testUser0 siblingUser] == %@", [testUser0 siblingUser]);
+    XCTAssertEqual([testUser1 siblingUser], testUser0, @"[testUser1 siblingUser] == %@", [testUser1 siblingUser]);
+    XCTAssertEqual([testUser0 siblingUser], testUser1, @"[testUser0 siblingUser] == %@", [testUser0 siblingUser]);
 }
 
 #pragma mark - EKCopyingExtensions

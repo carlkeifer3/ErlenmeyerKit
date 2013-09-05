@@ -27,7 +27,7 @@
                      forKey: attributeName];
     }
     
-    // Do not add properties. In order to add properties, use -copyToKeyPaths:
+    // Do not add relationships. In order to add relationships, use -copyToKeyPaths:
     
     return newObject;
 }

@@ -1,22 +1,19 @@
 //
-//  EKTestUser.m
+//  EKTestItemName.m
 //  ErlenmeyerKitTests
 //
 //  Created by Patrick Perini on 8/6/13.
 //  Copyright (c) 2013 MegaBits. All rights reserved.
 //
 
-#import "EKTestUser.h"
+#import "EKTestItemName.h"
 #import "EKTestItem.h"
-#import "EKTestUser.h"
 
 
-@implementation EKTestUser
+@implementation EKTestItemName
 
-@dynamic creationDate;
-@dynamic email;
+@dynamic name;
 @dynamic uuid;
 @dynamic items;
-@dynamic siblingUser;
 
 @end

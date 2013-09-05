@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3381.3" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3389" systemVersion="12E55" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="EKTestItem" representedClassName="EKTestItem" syncable="YES">
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="itemNames" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EKTestItemName" inverseName="items" inverseEntity="EKTestItemName" syncable="YES"/>
         <relationship name="user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="EKTestUser" inverseName="items" inverseEntity="EKTestUser" syncable="YES"/>
+    </entity>
+    <entity name="EKTestItemName" representedClassName="EKTestItemName" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="uuid" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="items" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="EKTestItem" inverseName="itemNames" inverseEntity="EKTestItem" syncable="YES"/>
     </entity>
     <entity name="EKTestUser" representedClassName="EKTestUser" syncable="YES">
         <attribute name="creationDate" optional="YES" attributeType="Date" syncable="YES"/>
@@ -15,5 +21,6 @@
     <elements>
         <element name="EKTestItem" positionX="0" positionY="0" width="0" height="0"/>
         <element name="EKTestUser" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="EKTestItemName" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

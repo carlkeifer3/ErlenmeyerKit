@@ -304,6 +304,9 @@ static NSManagedObjectModel *sharedManagedObjectModel;
         else
         {
             NSManagedObject *relationshipValue = [self valueForKey: relationshipKey];
+            if (!relationshipValue)
+                continue;
+            
             saveRequestURL = [NSString stringWithFormat: @"%@/%@s", [[relationshipValue class] serverURL], [relationshipValue class]];
             
             NSMutableDictionary *relationshipValueDictionary = [[relationshipValue dictionaryValue] mutableCopy];
