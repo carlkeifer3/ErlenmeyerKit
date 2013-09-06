@@ -11,10 +11,12 @@
 #import "EKTestItem.h"
 #import "NSManagedObject+EKManagedObjectExtensions.h"
 #import "NSManagedObject+EKQueryingExtensions.h"
+#import "EKEnumerations.h"
 
-@interface EKTestsViewController ()
-
-@end
+EKEnum(EKTestEnumeration,
+    EKTestEnumeration0,
+    EKTestEnumeration1
+);
 
 @implementation EKTestsViewController
 
@@ -30,7 +32,7 @@
 
 - (void)viewDidLoad
 {
-    
+    NSLog(@"%d", EKTestEnumerationFromInteger(1));
     [super viewDidLoad];
 }
 

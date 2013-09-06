@@ -8,14 +8,8 @@
 
 #import <Foundation/Foundation.h>
 #import <CoreData/CoreData.h>
-#import "EKEnumerations.h"
 
 @class EKTestItemName, EKTestUser;
-
-EKEnum(Test,
-    TestValue,
-    T2
-);
 
 @interface EKTestItem : NSManagedObject
 

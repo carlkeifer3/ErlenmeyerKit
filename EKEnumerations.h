@@ -62,7 +62,8 @@
             }                                                                                                                               \
             value = @(lastValue);                                                                                                           \
                                                                                                                                             \
-            [valuesByName setObject: value forKey: [valueNamePair objectAtIndex: 0]];                                                                                   \
+            NSString *name = [[valueNamePair objectAtIndex: 0] stringByTrimmingCharactersInSet: [NSCharacterSet whitespaceCharacterSet]];   \
+            [valuesByName setObject: value forKey: name];                                                                                   \
         }                                                                                                                                   \
                                                                                                                                             \
         return (NSDictionary *)valuesByName;                                                                                                \
