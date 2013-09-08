@@ -9,6 +9,10 @@
 #import "NSManagedObject+EKQueryingExtensions.h"
 #import "NSManagedObject+EKManagedObjectExtensions.h"
 #import "PCHTTP.h"
+#import <objc/runtime.h>
+
+#pragma mark - External Constants
+NSString *const EKTransientKey = @"EKTransient";
 
 #pragma mark - Internal Constants
 /*!
@@ -249,6 +253,59 @@ static NSManagedObjectModel *sharedManagedObjectModel;
         NSError *error;
         [[[self class] sharedManagedObjectContext] save: &error];
         [[self class] throwExceptionForError: error];
+    }
+}
+
++ (void)deleteTransientObjects
+{
+    // Check to make sure the calling class is NSManagedObject, and not a subclass.
+    if (![NSStringFromClass(self) isEqualToString: NSStringFromClass([NSManagedObject class])])
+    {
+        [self doesNotRecognizeSelector: _cmd];
+        return;
+    }
+    
+    // Delete object if transient
+    for (NSManagedObject *object in [[self all] copy])
+    {
+        NSDictionary *objectEntityUserInfo = [[object entity] userInfo];
+        if ([[objectEntityUserInfo allKeys] containsObject: EKTransientKey])
+        {
+            if (![[objectEntityUserInfo objectForKey: EKTransientKey] boolValue])
+                continue;
+            
+            [object delete];
+        }
+    }
+    
+    // Get list of subclasses
+    NSInteger numberOfClasses = objc_getClassList(NULL, 0);
+    Class *classes = NULL;
+    
+    classes = (Class *)malloc(sizeof(Class) * numberOfClasses);
+    numberOfClasses = objc_getClassList(classes, numberOfClasses);
+    
+    NSMutableArray *subclasses = [NSMutableArray array];
+    for (NSInteger classIndex = 0; classIndex < numberOfClasses; classIndex++)
+    {
+        Class superclass = classes[classIndex];
+        do
+        {
+            superclass = class_getSuperclass(superclass);
+        } while (superclass && (superclass != self));
+        
+        if (!superclass)
+            continue;
+        
+        [subclasses addObject: classes[classIndex]];
+    }
+    
+    free(classes);
+    
+    // Recurse
+    for (Class subclass in subclasses)
+    {
+        [subclass deleteTransientObjects];
     }
 }
 

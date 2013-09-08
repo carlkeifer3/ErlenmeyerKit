@@ -7,6 +7,12 @@
 
 #import <CoreData/CoreData.h>
 
+#pragma mark - External Constants
+/*!
+ *  DOCME
+ */
+extern NSString *const EKTransientKey;
+
 @interface NSManagedObject (EKQueryingExtensions)
 
 #pragma mark - Class Accessors
@@ -40,6 +46,11 @@
  *  DOCME
  */
 + (void)saveAll;
+
+/*!
+ *  DOCME
+ */
++ (void)deleteTransientObjects;
 
 #pragma mark - Mutators
 /*!
