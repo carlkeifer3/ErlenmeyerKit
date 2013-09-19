@@ -39,6 +39,11 @@ NSString *const EKServerErrorDomain = @"EKServerErrorDomain";
  */
 + (NSArray *)allMatchingPredicateString:(NSString *)predicateString limit:(NSInteger)limit;
 
+/*!
+ *  DOCME
+ */
++ (void)allFromServer:(void (^)(NSArray *, NSError *))responseHandler where:(NSDictionary *)filter faulting:(BOOL)faulting;
+
 #pragma mark - Class Error Handlers
 /*!
  *  DOCME
@@ -140,10 +145,18 @@ static NSManagedObjectModel *sharedManagedObjectModel;
 }
 
 + (void)allFromServer:(void (^)(NSArray *, NSError *))responseHandler where:(NSDictionary *)filter
+{
+    return [self allFromServer: responseHandler
+                         where: filter
+                      faulting: NO];
+}
+
++ (void)allFromServer:(void (^)(NSArray *, NSError *))responseHandler where:(NSDictionary *)filter faulting:(BOOL)faulting
 {    
     NSString *allRequestURL = [NSString stringWithFormat: @"%@/%@s", [self serverURL], self];
     PCHTTPResponseBlock allRequestResponseHandler = ^(PCHTTPResponse *response)
     {
+        __block NSError *error;
         switch ([response status])
         {
             case PCHTTPResponseStatusOK:
@@ -151,11 +164,9 @@ static NSManagedObjectModel *sharedManagedObjectModel;
                 
             default:
             {
-                NSError *error = [NSError errorWithDomain: EKServerErrorDomain
-                                                     code: [response status]
-                                                 userInfo: nil];
-                responseHandler(nil, error);
-                return;
+                error = [NSError errorWithDomain: EKServerErrorDomain
+                                            code: [response status]
+                                        userInfo: nil];
             }
         }
         
@@ -171,9 +182,40 @@ static NSManagedObjectModel *sharedManagedObjectModel;
             
             [object addEntriesFromDictionary: responseObject];
             [objects addObject: object];
+            
+            // Add relationships recursively
+            if (!faulting)
+            {
+                for (NSString *key in [responseObject allKeys])
+                {
+                    if ([[[[object entity] relationshipsByName] allKeys] containsObject: key])
+                    {
+                        // Get relationship description
+                        NSRelationshipDescription *relationshipDescription = [[[object entity] relationshipsByName] objectForKey: key];
+                        Class relationshipDestinationClass = NSClassFromString([[relationshipDescription destinationEntity] managedObjectClassName]);
+                        
+                        // Push into a new block to capture variables
+                        void (^getRelationship)(NSString *, id, NSManagedObject *) = ^(NSString *key, id value, NSManagedObject *object)
+                        {
+                            // Get relationship value
+                            void (^gotRelationship)(NSArray *, NSError *) = ^(NSArray *relationshipObjects, NSError *relationshipError)
+                            {
+                                [object setValue: [relationshipObjects firstObject]
+                                          forKey: key];
+                            };
+                            
+                            [relationshipDestinationClass allFromServer: gotRelationship
+                                                                  where: @{[self primaryKey]: value}
+                                                               faulting: YES];
+                        };
+                        
+                        getRelationship(key, [responseObject objectForKey: key], object);
+                    }
+                }
+            }
         }
         
-        responseHandler(objects, nil);
+        responseHandler(objects, error);
     };
     
     [PCHTTPClient get: allRequestURL
