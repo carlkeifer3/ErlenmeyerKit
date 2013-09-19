@@ -41,6 +41,16 @@ extern NSString *const EKPrimitiveTypeKey;
 /*!
  *  DOCME
  */
+- (BOOL)hasValueForKey:(NSString *)key;
+
+/*!
+ *  DOCME
+ */
+- (BOOL)hasValueForKeyPath:(NSString *)keyPath;
+
+/*!
+ *  DOCME
+ */
 - (NSDictionary *)dictionaryValue;
 
 #pragma mark - Mutators

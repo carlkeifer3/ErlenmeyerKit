@@ -55,6 +55,28 @@ static NSString *primaryKey = @"uuid";
 }
 
 #pragma mark - Accessors
+- (BOOL)hasValueForKey:(NSString *)key
+{
+    return [self respondsToSelector: @selector(key)];
+}
+
+- (BOOL)hasValueForKeyPath:(NSString *)keyPath
+{
+    NSArray *keyPathPieces = [keyPath componentsSeparatedByString: @"."];
+    
+    id value = self;
+    for (NSString *key in keyPathPieces)
+    {
+        BOOL hasValueForKeyPath = [value hasValueForKey: key];
+        if (!hasValueForKeyPath)
+            return NO;
+        
+        value = [value valueForKey: key];
+    }
+    
+    return YES;
+}
+
 - (NSDictionary *)dictionaryValue
 {
     NSMutableSet *relationshipKeys = [NSMutableSet set];
