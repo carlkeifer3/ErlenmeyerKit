@@ -60,7 +60,7 @@ static NSString *primaryKey = @"uuid";
     if ([key isEqualToString: NSStringFromSelector(@selector(self))])
         return YES;
     
-    return [self respondsToSelector: @selector(key)];
+    return [self respondsToSelector: NSSelectorFromString(key)];
 }
 
 - (BOOL)hasValueForKeyPath:(NSString *)keyPath
