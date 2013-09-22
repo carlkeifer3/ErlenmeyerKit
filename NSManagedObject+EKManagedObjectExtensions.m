@@ -57,6 +57,9 @@ static NSString *primaryKey = @"uuid";
 #pragma mark - Accessors
 - (BOOL)hasValueForKey:(NSString *)key
 {
+    if ([key isEqualToString: NSStringFromSelector(@selector(self))])
+        return YES;
+    
     return [self respondsToSelector: @selector(key)];
 }
 
